@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Iqbal SectionA </title>
+		<link rel="icon" type="image/x-icon" href="Picture/logo.png">
+		
+		<!--rgb(255, 52, 52 == red-->
+		<!--rgb(33, 35, 51) == light black-->
+		<!--rgb(24, 24, 32) == black-->
+		
+		<style>
+			body {
+				background-image: url('Picture/landscapeBlur.jpg'); 
+				background-repeat: no-repeat; 
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+			}
+			
+			@font-face {
+				font-family: bebas;
+				src: url(Font/Bebas.ttf);
+			}
+			@font-face {
+				font-family: quote;
+				src: url(Font/Quote.ttf);
+			}
+			@font-face {
+				font-family: upheavtt;
+				src: url(Font/upheavtt.ttf);
+			}
+			@font-face {
+				font-family: bitmap;
+				src: url(Font/8-BIT_WONDER.ttf);
+			}
+			@font-face {
+				font-family: videotype;
+				src: url(Font/videotype.ttf);
+			}
+			
+			.textt {
+				color:rgb(255, 255, 255); 
+				font-size:300%; 
+				font-family:upheavtt;
+				text-align: center;
+				letter-spacing: 3px;
+			}
+			hl {
+				color:rgb(255, 52, 52);
+			}
+			.contain {
+				border:2px solid rgb(0, 255, 0, 0);
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<style>
+			.brgd {
+				position:absolute; 
+				width:100%; 
+				left:0%; 
+				z-index:-10; 
+				background-color:rgb(24, 24, 32);
+			}
+			
+		</style>
+		
+		<script>
+			window.onscroll = function() { scroll() };
+			
+			function scroll() 
+			{
+				bioscrollFunction();
+				homescrollFunction();
+			}
+			
+			function isElementInViewport(el) 
+			{
+				// Special bonus for those using jQuery
+				if (typeof jQuery === "function" && el instanceof jQuery) {
+					el = el[0];
+				}
+
+				var rect = el.getBoundingClientRect();
+
+				return (
+					rect.top >= 0 &&
+					rect.left >= 0 &&
+					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+					rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+				);
+			}
+		</script>
+		
+		<div class="brgd" style="top:0px; height:1730px;"></div>
+		<div class="brgd" style="top:2080px; height:4135px;"></div>
+		
+		<style>
+			/* The side navigation menu */
+			.sidenav {
+			  height: 100%; 			/* 100% Full-height */
+			  width: 0; 				/* 0 width - change this with JavaScript */
+			  position: fixed; 			/* Stay in place */
+			  z-index: 4; 				/* Stay on top */
+			  top: 0; 					/* Stay at the top */
+			  left: 0;
+			  background-color: #111; 	/* Black*/
+			  overflow-x: hidden; 		/* Disable horizontal scroll */
+			  padding-top: 60px; 		/* Place content 60px from the top */
+			  transition: 0.5s; 		/* 0.5 second transition effect to slide in the sidenav */
+			}
+
+			/* The navigation menu links */
+			.sidenavlink {
+			  padding: 8px 8px 8px 32px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: rgb(200, 200, 200);
+			  display: block;
+			  transition: 0.3s;
+			}
+
+			/* When you mouse over the navigation links, change their color */
+			.sidenavlink:hover {
+			  color: rgb(255, 52, 52);
+			}
+
+			/* Position and style the close button (top right corner) */
+			.closebtn {
+			  position: absolute;
+			  top: 0;
+			  right: 25px;
+			  font-size: 36px;
+			  margin-left: 50px;
+			}
+		</style>
+		
+		<a href="javascript:void(0)"><img src="Picture/mune1.png" class="contain" style="position:fixed; top:-5px; left:-5px; height:100px; z-index:3; border-radius:3px;" onclick="openNav()"></a>
+		<img id="guide" style="position:fixed; top:50px; left:50px; width:130px; z-index:5;" src="Picture/menuGuide.png">
+		
+		<div id="mySidenav" class="sidenav" style="font-family: bebas; color:rgb(33, 35, 51); letter-spacing: 3px;">
+		  <a href="javascript:void(0)" class="sidenavlink closebtn" onclick="closeNav()" style="font-family: bebas; color:rgb(255, 52, 52); letter-spacing: 3px;"><b>&times;</b></a>
+		  <a href="index.html" class="sidenavlink">Main&nbsp;Page</a>
+		  <a href="page2.html" class="sidenavlink">Section&nbsp;B</a>
+		</div>
+		
+		<script>
+			/* Set the width of the side navigation to 250px */
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			  document.getElementById("guide").style.display = "none";
+			}
+			/* Set the width of the side navigation to 0 */
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0px";
+			}
+		</script>
+		
+		<div class="textt contain" style="font-size:500%;"> WELCOME TO <br><hl>IQBAL</hl><br> WEBPAGE </div>
+		
+		<!-- =========== Slideshow =========== -->
+	
+		<!--div id="iitk1" style="color:rgb(255, 52, 52);">1</div>
+		<div id="iitk2" style="color:rgb(255, 52, 52);">2</div-->
+		
+		<style>
+			.slideCon {
+				position: 
+				absolute; 
+				top: 20px; 
+				width: 1440px; 
+				height: 480px; 
+				overflow: hidden;
+				border-radius:40px;
+			}
+			.slideImage {
+				position: absolute;
+				left:0px;
+				opacity: 0;
+				height:100%;
+			}
+			
+			/* ===== Fading animation ===== */
+			
+			.slideFade {
+				animation-name: slideFade;
+				animation-duration: 2s;
+				animation-play-state:paused;
+			}
+			@keyframes slideFade {
+				from {opacity: 1; transform: translate(-20px, 0px);} 
+				to {opacity: 0; transform: translate(0px, 0px);}
+			}
+		</style>
+		
+		<div class="contain" style="position:relative; display:flex; justify-content:center; height:550px;">	
+			<!--div style="transform:translate(0px, 21px); z-index:2;">	  
+			  <img style="width: 1480px;" src="Picture/bdr.png">
+			</div-->
+			
+			<div class="contain slideCon">
+			  <img class="slideFade slideImage" src="Picture/p1.jpg">
+			  <img class="slideFade slideImage" src="Picture/p2.jpg">
+			  <img class="slideFade slideImage" src="Picture/p3.jpg">
+			  <img class="slideFade slideImage" src="Picture/p4.jpg">
+			</div>
+		</div>
+		
+		<script>
+			let current = -1;
+			let next = 0;
+			let slides = document.getElementsByClassName("slideImage");
+			let duration = 2000; //2 Seconds
+			
+			// Bila first load page
+			// Hilangkan semua slide
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			
+			slides[next].style.display = "block";
+			current = next;
+			next++;
+			setTimeout(loopSlide, duration);
+			
+			function loopSlide() 
+			{
+				showSlides(next);
+				setTimeout(nextSlide, duration); 
+			}
+			function nextSlide()
+			{
+				current = next;
+				next++;
+				
+				if (next >= slides.length) { next = 0; }
+				
+				//document.getElementById("iitk1").innerHTML = next;
+				setTimeout(loopSlide, duration);
+			}
+
+			function showSlides(x) 
+			{
+				slides[current].style.zIndex = 1;
+				slides[x].style.zIndex = -1;
+				slides[x].style.display = "block";
+				slides[x].style.animationPlayState = "paused";
+				slides[current].style.animationPlayState = "running";
+				// Delete in 2 seconds
+				setTimeout(deleteSlide, duration); 
+			}
+			function deleteSlide() 
+			{
+				slides[current].style.display = "none";
+			}
+		</script>	
+		
+		<style>
+			.playMusic {
+				position:absolute; 
+				height:70%;
+				top:10px;
+				left:30px;
+			}
+			.loopMusic {
+				position:absolute; 
+				height:70%;
+				top:10px;
+				right:30px;
+			}
+			.glowIcon {
+				opacity:0;
+				transition: all 0.3s;	
+			}
+			.glowIcon:hover {
+				opacity:1;
+			}
+		</style>
+		
+		<audio autoplay loop id="music">
+			<source src="LoneCheery.mp3" type="audio/mpeg">
+		</audio>
+		<br>
+		
+		<center>
+			<div style="position:relative; width:520px; height:70px; background-color:rgb(33, 35, 51); border-top:3px solid rgb(255, 52, 52); border-bottom:3px solid rgb(255, 52, 52); border-radius:20px;">
+				<div>
+					<img src="Picture/play.png" id="i1" class="playMusic">
+					<img src="Picture/playGlow.png" id="i1hover" class="playMusic glowIcon" onclick="playPause()">
+				</div>
+				
+				<div class="textt" style="position:absolute; top:10px; right:50px; text-align:center;">Let's vibing</div>
+				
+				<!--div>
+					<img src="Picture/loop.png" id="i2" class="loopMusic">
+					<img src="Picture/loopGlow.png" id="i2hover" class="loopMusic glowIcon" onclick="loopMusic()">
+				</div-->
+			</div>
+		</center>
+
+		<script>
+			var music = document.getElementById("music");
+			var icon1 = document.getElementById("i1");
+			var icon1Hover = document.getElementById("i1hover");
+			//var icon2 = document.getElementById("i2");
+			//var icon2Hover = document.getElementById("i2hover");
+			
+			music.volume = 0.5;
+			
+			function playPause() 
+			{
+				if (music.paused) { music.play(); }
+				else if (!music.paused) { music.pause(); }
+			}
+			music.onpause = function() {
+				icon1.src = "Picture/play.png";
+				icon1Hover.src = "Picture/playGlow.png";
+			};
+			music.onplay = function() {
+				icon1.src = "Picture/pause.png";
+				icon1Hover.src = "Picture/pauseGlow.png";
+			};
+			
+			
+			/*function loopMusic() 
+			{
+				if (!music.loop)
+				{
+					music.loop = true;
+					icon2.src = "Picture/noloop.png";
+					icon2Hover.src = "Picture/noloopGlow.png";
+				}
+				else if (music.loop)
+				{
+					music.loop = false;
+					icon2.src = "Picture/loop.png";
+					icon2Hover.src = "Picture/loopGlow.png";
+				}
+			}*/
+		</script>
+		
+		<br><br><br><br><br><br>
+		
+		<style>
+			.bioStyle {
+				position: absolute; 
+				top: 150px; 
+				left: 600px; 
+				height: 280px;
+			}
+			.bioTransition {
+				transition: all 0.3s;
+			}
+		</style>
+		
+		<div class="contain" style="position:relative; height:730px;">
+			<div class="contain" style="position:absolute; left:-10px; top:220px; width:1220px; height:210px; background-color:rgb(33, 35, 51); border-top-right-radius:20px; border-bottom-right-radius:20px; border-top:2px solid rgb(255, 52, 52);"></div>
+			<img style="transform: translate(100px, 0px); width:450px;" src="Picture/BalKoyak.png">
+			
+			<div id="bio" class="textt bioStyle bioTransition contain">
+				<div id="namebal" class="bioTransition" style="text-align:left;">IM <hl>IQBAL BIN AMIR</hl></div>
+				
+				<div id="studybal" class="bioTransition">
+					<div style="font-size:70%; text-align:left;">
+						Study in <hl>Bachelor Degree</hl>
+						<br> 
+						in <hl>Electronic Engineering</hl>
+					</div>
+					
+					<div style="transform: translate(0px, 30px); font-size:70%; text-align:left;">At
+						<a href="https://uitm.edu.my/index.php/en/" target="_blank">
+							<img style="position:absolute; left:60px; top:-20px; width:200px;" src="Picture/uitm.png"> 
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>	
+		
+		<script>
+			var bioBal = document.getElementById("bio");
+			var nameBal = document.getElementById("namebal");
+			var studyBal = document.getElementById("studybal");
+			
+			function bioscrollFunction() 
+			{
+				var visible = isElementInViewport(bioBal);
+				
+				if (visible == true) 
+				{
+					bioBal.style.opacity = 1;
+					nameBal.style.transform = "translate(0px, 0px)";
+					studyBal.style.transform = "translate(0px, 45px)";
+				}
+				else 
+				{
+					bioBal.style.opacity = 0;
+					nameBal.style.transform = "translate(-20px, 0px)";
+					studyBal.style.transform = "translate(0px, 25px)";
+				}
+			}
+		</script>
+
+		
+		<div class="textt contain" style="height:350px;">
+			<div style="transform:translate(0px, 120px); font-family:quote; text-shadow:2px 2px 5px black; text-align:center;">"If you cannot do great things, do small things in a great way."<br>- Napoleon Hill</div>
+		</div>
+		
+		<style>
+			.picCon {
+				width: 250px;
+				height: 250px;
+				overflow: hidden;
+			}
+			.pic {
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat; /* Do not repeat the image */
+				width: 100%;
+				height: 100%;
+				
+				transition: transform ease 1s;
+			}
+			.pic:hover {
+				transform: scale(1.2);
+			}
+			
+			.textGame {
+				transform:translate(0px, 0px); 
+				font-family:bebas; 
+				font-size:200%;
+			}
+		</style>
+		
+		<div class="contain" style="height:900px;">z
+		
+			<div style="transform:translate(0px, 170px);">
+				<div class="textt" style="position:relative; text-align:center;">MY FAVOURITE<hl> VIDEO GAME</hl></div><br><br><br>
+				
+				<center>
+					<table style="border-spacing:70px 0px;">	
+						<tr style="position:relative;">
+							<td>
+								<a href="https://insomniac.games/game/spider-man-ps4/" target="_blank">
+									<div class="picCon">
+										<div class="pic" style="background-image:url('Picture/Spiderman.png');"></div>
+									</div>
+								</a>
+							</td>
+							<td>
+								<a href="https://genshin.hoyoverse.com/en/home" target="_blank">
+									<div class="picCon">
+										<div class="pic" style="background-image:url('Picture/Genshin.jpg');"></div>
+									</div>
+								</a>
+							</td>
+							<td>
+								<a href="https://www.minecraft.net/en-us" target="_blank">
+									<div class="picCon">
+										<div class="pic" style="background-image:url('Picture/Minecraft.jpg');"></div>
+									</div>
+								</a>
+							</td>
+						</tr>
+						<tr style="height:130px; background-color:rgb(33, 35, 51);">
+							<td class="contain">
+								<div class="textt textGame">Marvel's<br>Spider-Man</div>
+							</td>
+							<td class="contain">
+								<div class="textt textGame">Genshin<br>Impact</div>
+							</td>
+							<td class="contain">
+								<div class="textt textGame">Minecraft</div>
+							</td>
+						</tr>
+					</table>
+				</center>
+
+			</div>
+		</div>
+		
+		<div class="contain" style="height:505px; text-align:center;">
+			<center>
+				<div style="transform:translate(0px, 0px);">
+					<div style="height:500px; background-color:rgb(33, 35, 51); border-top:5px solid rgb(255, 52, 52);"></div>
+						
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31860.204437551078!2d101.63420458642835!3d3.464761725172826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc6c50246f5a27%3A0xa8a44fc681e37ee3!2sBatang%20Kali%2C%20Selangor!5e0!3m2!1sen!2smy!4v1671380850189!5m2!1sen!2smy"
+						width="400px" height="400px" style="position:absolute; right:200px; top:45px; border-color:rgb(0, 0, 0, 0); border-radius:20px;">
+					</iframe>
+					
+					<div id="home" style="position:absolute; left:145px; top:140px; width:550px; border:2px solid rgb(0, 255, 0, 0); transition: all 0.3s;">
+						<div class="textt" style="text-align:left;">MY<hl> HOMETOWN</hl>
+							<br><br>
+							<div class="textt" style="font-size:80px; text-align:left;">BATANG<hl> KALI</hl></div>
+						</div>
+					</div>
+				</div>
+			</center>
+		</div>
+		
+		<script>
+			var homeBal = document.getElementById("home");
+			
+			function homescrollFunction() 
+			{			
+				var visible = isElementInViewport(homeBal);
+				
+				if (visible == true) 
+				{
+					homeBal.style.opacity = 1;
+					homeBal.style.transform = "translate(0px, 0px)";
+				}
+				else 
+				{
+					homeBal.style.opacity = 0;
+					homeBal.style.transform = "translate(-20px, 0px)";
+				}
+			}
+		</script>
+		
+		
+		<div class="contain" style="height:1050px; text-align:center;">
+			<div style="transform:translate(0px, 200px);">
+				<div class="textt" style="position:relative; text-align:center;">MY<hl> PROJECT</hl></div><br><br><br>
+				
+				<center>
+					<img class="contain" style="height:230px; border-radius:10px; border:5px solid rgb(0, 0, 0, .3);" src="Picture/Projectoooo.png">
+					
+					<div>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/leIfIi7ZmbU" title="YouTube video player" 
+						style="transform:translate(-300px, 50px); border-top:5px solid rgb(255, 52, 52); border-radius: 20px;" frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						
+						<div class="textt" style="width:500px; transform:translate(300px, -220px); text-align:left;">ADVANCED<hl> LUGGAGE</hl>
+							<div style="font-size:60%; font-family:videotype;"><br>Can <hl>measure weight </hl>inside the luggage easier when go through airport</div>
+						</div>
+					</div>
+				</center>
+			</div>
+		</div>
+		
+		<div class="contain" style="height:1150px; text-align:center;">
+			<div style="transform:translate(0px, 150px);">
+				<div class="textt" style="position:relative; text-align:center;">EXAMPLE<hl> ANIMATION TOOLS</hl></div><br><br><br>
+				
+				<center>
+					<table class="contain" style="border-spacing:70px 0px;">	
+						<tr>
+							<td style="padding-bottom:100px">
+								<iframe width="400" height="227" src="https://www.youtube.com/embed/EkqUocPMRDg" title="YouTube video player" 
+								style="border-top:5px solid rgb(255, 52, 52); border-radius: 20px;" frameborder="0" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</td>
+							<td style="padding-bottom:100px">
+								<div class="textt" style="width:500px; text-align:left;"><hl>BLENDER<sup style="font-family:Arial; font-size:50%;">&reg;</sup></hl>
+									<div style="font-size:60%; font-family:videotype;"><br>Blender is a free and open source 3D creation suite that support modeling, animation and much more</div>
+								</div>
+								<br>
+								<a href="https://www.blender.org" target="_blank" style="font-size:150%; font-family:videotype; color:rgb(0, 204, 255);">Click for more info</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="textt" style="width:500px; text-align:left;"><hl>POWTOON<sub style="font-family:Arial; font-size:50%;">&copy;</sub></hl>
+									<div style="font-size:60%; font-family:videotype;"><br>Powtoon is an intuitive animation software that can create animated videos with a professional look</div>
+								</div>
+								<br>
+								<a href="https://www.powtoon.com/?locale=en" target="_blank" style="font-size:150%; font-family:videotype; color:rgb(0, 204, 255);">Click for more info</a>
+							</td>
+							<td style="text-align:right;">
+								<iframe width="400" height="227" src="https://www.youtube.com/embed/oR__WIK_yqk" title="YouTube video player" 
+								style="border-top:5px solid rgb(255, 52, 52); border-radius: 20px;" frameborder="0" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</td>
+						</tr>
+					</table>
+				</center>
+			</div>
+		</div>
+		
+		<style>
+			.inputBox {
+				width: 70%;
+				font-family:verdana;
+				color:rgb(255, 255, 255); 
+				padding: 7px 10px;
+				background-color: rgba(55, 57, 73, .5);
+				border: 1px solid rgb(255, 52, 52, .5);
+				border-radius: 4px;
+				box-sizing: border-box;
+			}
+			.sendButton {
+				font-size:50%;
+				font-family: bitmap;
+				padding: 7px 30px;
+				border-radius: 4px;
+				background-color: rgb(255, 52, 52);
+				color: rgb(255, 255, 255);
+				border-color: rgb(255, 52, 52);
+				transition: all 0.3s;	
+			}
+			.sendButton:hover {
+				background-color: rgb(140, 52, 52);
+				color: rgb(255, 255, 255);
+				border-color: rgb(140, 52, 52);
+				transition: all 0.3s;
+			}			
+		</style>
+		
+		<div class="contain" style="height:500px;">
+			<center>
+				<div class="contain" style="position:relative; width:70%; height:500px; background-color:rgb(33, 35, 51); border-top:5px solid rgb(255, 52, 52); border-top-left-radius:40px; border-top-right-radius:40px;">
+					<div class="textt" style="position:absolute; top:180px; left:150px; font-size:60px;">CONTACT <br><hl>ME</hl></div><br><br><br>
+					
+					<form action="mailto:someone@example.com" method="post" enctype="text/plain" class="textt contain" style="width:500px; position:absolute; top:20px; right:20px; font-size:200%">
+						<br>
+						Name:<br><input type="text" name="name" class="inputBox"><br><br>
+						E-mail:<br><input type="text" name="mail" class="inputBox"><br><br>
+						Comment:<br><input type="text" name="comment" class="inputBox" style="height:100px;"><br><br>
+						
+						<input type="submit" value="Send" class="sendButton">
+						<input type="reset" value="Reset" class="sendButton">
+						
+						<br><br>
+					</form>
+				</div>
+			</center>
+		</div>
+		
+	</body>
+</html>

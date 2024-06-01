@@ -34,14 +34,10 @@
 
 			/* Text style */
 			.mainTextStyle {
+				width: 20vw;
 				color: rgb(227, 227, 255); 
 				font-family: Ballega;
 			}
-			
-			/* For debug purpose, check width element */
-			/* div {
-				border: 1px solid greenyellow;
-			} */
 
 			/* Text highlight */
 			hl {
@@ -50,7 +46,7 @@
 
 			/* Data table padding */
 			td {
-				padding: 15px;
+				padding: .5vw 2vw;
 			}
 
 			/* Properties for each container box */
@@ -70,6 +66,40 @@
 	
 	<body>
 
+		<!-- Debug purpose -->
+		<style>
+			/* For debug purpose, check width element */
+			/* div {
+				border: .1vw solid greenyellow;
+			} */
+
+			/* Display text for debug */
+			#debug {
+				position: fixed; 
+				right: 0vw; 
+				text-align: right; 
+				z-index: 90;
+			}
+		</style>
+
+		<!-- <div id="debug" class="mainTextStyle">Press any key</div> -->
+
+		<script>
+			document.addEventListener('wheel', function(event) {
+				const output = document.getElementById('debug');
+				const deltaY = event.deltaY;
+	
+				let direction = '';
+				if (deltaY < 0) {
+					direction = 'up';
+				} else if (deltaY > 0) {
+					direction = 'down';
+				}
+	
+				output.textContent = `Scrolled ${direction}`;
+			});
+		</script>
+		
 		<!-- 
 		=========================
 			Menu
@@ -78,37 +108,46 @@
 
 		<style>
 			/* Style for Menu  */
-			.MenuTable {
+			.MenuBase {
 				position: fixed; 
-				transform: translate(2vw, 0vw);
-				padding: 1vw;
+				transform: translate(1vw, 1vw);
+				padding: .5vw;
 				z-index: 10;
+				background-color: rgba(75, 75, 92, 0.812);
+				border-radius: 3vw;
 			}
 			.MenuText {
 				transform: translate(2vw, 0vw);
 				z-index: 2;
 				font-size: 1vw;
 				text-decoration: none;
+				transition: all 0.3s;	
+			}
+			.MenuText:hover {
+				color: rgb(255, 70, 70);
+				transition: all 0.3s;	
 			}
 		</style>
 
 		<!-- Menu fixed on top of screen -->
-		<table class="MenuTable">
-			<tr>
-				<td>
-					<a href="#homePage" class="mainTextStyle MenuText">Home</a>
-				</td>
-				<td>
-					<a href="#aboutPage" class="mainTextStyle MenuText">About me</a>
-				</td>
-				<td>
-					<a href="#projectPage" class="mainTextStyle MenuText">Project</a>
-				</td>
-				<td>
-					<a href="#contactPage" class="mainTextStyle MenuText">Contact</a>
-				</td>
-			</tr>
-		</table>
+		<div class="MenuBase">
+			<table>
+				<tr>
+					<td>
+						<a href="#homePage" class="mainTextStyle MenuText">Home</a>
+					</td>
+					<td>
+						<a href="#aboutPage" class="mainTextStyle MenuText">About me</a>
+					</td>
+					<td>
+						<a href="#projectPage" class="mainTextStyle MenuText">Project</a>
+					</td>
+					<td>
+						<a href="#contactPage" class="mainTextStyle MenuText">Contact</a>
+					</td>
+				</tr>
+			</table>
+		</div>
 
 		<!-- 
 		=========================
@@ -130,6 +169,7 @@
 			/* Style for name  */
 			.nameText {
 				position: absolute;
+				width: 28vw;
 				transform: translate(7vw, 23vw);
 				z-index: 2;
 				font-size: 6vw;
@@ -240,7 +280,6 @@
 		-->
 		
 		<div id="projectPage" class="baseBox">
-
 		</div>
 
 		<!-- 
@@ -263,7 +302,7 @@
 
 		<div id="contactPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
 		</div>
-		
+
 		<div id="projectPage" class="baseBox">
 		</div>
 

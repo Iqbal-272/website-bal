@@ -6,8 +6,12 @@
 		<link rel="icon" type="image/x-icon" href="Picture/logo.png">
 
 		<style>
+			html {
+				/* For smmoth scrolling effect */
+				scroll-behavior: smooth;
+			}
 			body {
-				background-color:rgb(39, 39, 48);
+				background-color:rgb(158, 158, 158);
 			}
 
 			/* Different Font types */
@@ -19,15 +23,34 @@
 				font-family: GodshineSans;
 				src: url(Font/GodshineSans.ttf);
 			}
-			
+			@font-face {
+				font-family: BuiltTilt;
+				src: url(Font/BuiltTilt.otf);
+			}
+			@font-face {
+				font-family: DREPHONIC;
+				src: url(Font/DREPHONIC.ttf);
+			}
+
 			/* Text style */
 			.mainTextStyle {
-				position: absolute;
-				color: rgb(255, 255, 255); 
+				color: rgb(227, 227, 255); 
 				font-family: Ballega;
 			}
+			
+			/* For debug purpose, check width element */
+			/* div {
+				border: 1px solid greenyellow;
+			} */
+
+			/* Text highlight */
 			hl {
 				color:rgb(255, 87, 87);
+			}
+
+			/* Data table padding */
+			td {
+				padding: 15px;
 			}
 
 			/* Properties for each container box */
@@ -38,6 +61,8 @@
 			.baseBox {
 				position: relative;
 				padding: 2vw;
+				height: 44vw;
+				background-color: rgb(39, 39, 48); 
 			}
 
 		</style>	
@@ -47,88 +72,186 @@
 
 		<!-- 
 		=========================
+			Menu
+		========================= 
+		-->
+
+		<style>
+			/* Style for Menu  */
+			.MenuTable {
+				position: fixed; 
+				transform: translate(2vw, 0vw);
+				padding: 1vw;
+				z-index: 10;
+			}
+			.MenuText {
+				transform: translate(2vw, 0vw);
+				z-index: 2;
+				font-size: 1vw;
+				text-decoration: none;
+			}
+		</style>
+
+		<!-- Menu fixed on top of screen -->
+		<table class="MenuTable">
+			<tr>
+				<td>
+					<a href="#homePage" class="mainTextStyle MenuText">Home</a>
+				</td>
+				<td>
+					<a href="#aboutPage" class="mainTextStyle MenuText">About me</a>
+				</td>
+				<td>
+					<a href="#projectPage" class="mainTextStyle MenuText">Project</a>
+				</td>
+				<td>
+					<a href="#contactPage" class="mainTextStyle MenuText">Contact</a>
+				</td>
+			</tr>
+		</table>
+
+		<!-- 
+		=========================
 			Home page
 		========================= 
 		-->
 
 		<style>
 
-			/* Style for Menu  */
-			.MenuText {
-				transform: translate(43vw, 0vw);
+			/* Style for line decoration */
+			.lineDeco {
+				position: absolute;
+				width: 10vw; 
+				height: .3vw;
+				background-color: rgb(203, 56, 56);
+				transform: translate(7vw, 22vw);
+			}
+
+			/* Style for name  */
+			.nameText {
+				position: absolute;
+				transform: translate(7vw, 23vw);
 				z-index: 2;
-				font-size: 1.5vw;
+				font-size: 6vw;
+				color:rgb(242, 242, 253);
 			}
 
 			/* Style for Bal Image */
 			.balImage {
 				position: absolute;
-				width: 37vw;
-				transform: translate(22vw, 6vw);
-			}
-
-			/* Style for name  */
-			.nameText {
-				transform: translate(5vw, 23vw);
-				z-index: 2;
-				font-size: 6vw;
+				width: 45vw;
+				transform: translate(25vw, 0vw);
 			}
 
 			/* Style for introduction  */
 			.intro1Text {
-				transform: translate(60vw, 12vw);
+				position: absolute;
+				transform: translate(60vw, 9.7vw);
 				z-index: 2;
-				font-family: GodshineSans;
-				font-size: 1.9vw;
+				font-family: BuiltTilt;
+				font-size: 1.3vw;
+				color:rgb(227, 227, 255);
 			}
 			.intro2Text {
-				transform: translate(60vw, 15vw);
+				position: absolute;
+				width: 28vw;
+				transform: translate(60vw, 12vw);
 				z-index: 2;
 				font-size: 2.2vw;
 			}
 			.intro3Text {
-				transform: translate(65vw, 25vw);
+				position: absolute;
+				width: 28vw;
+				transform: translate(60vw, 20vw);
 				z-index: 2;
-				font-family: GodshineSans;
-				font-size: 1.9vw;
+				font-family: DREPHONIC;
+				font-size: 1.7vw;
+				color:rgb(153, 153, 181);
 			}
-
 
 		</style>
 
-		<div class="baseBox">
-			<div class="mainTextStyle MenuText">
-				Home
-				&nbsp;
-				&nbsp;
-				&nbsp;
-				&nbsp;
-				About me
-				&nbsp;
-				&nbsp;
-				&nbsp;
-				&nbsp;
-				Project
-				&nbsp;
-				&nbsp;
-				&nbsp;
-				&nbsp;
-				Contact
-			</div>
-			<div class="mainTextStyle nameText">
+		<div id="homePage" class="baseBox">
+
+			<!-- Line decoration -->
+			<div class="lineDeco"></div>
+
+			<!-- Name text -->
+			<div id="nameBal" class="mainTextStyle nameText">
 				Iqbal <br> bin Amir
 			</div>
+
+			<!-- Picture Bal -->
 			<img class="balImage" src="Picture/Bal.png">
+
+			<!-- Introduction text -->
 			<div class="mainTextStyle intro1Text">
-				- Introduction
+				<hl>//</hl> Introduction
 			</div>
-			<div class="mainTextStyle intro2Text">
-				I’m a <hl>programmer</hl> and <br> <hl>web developer</hl>
+			<div id="middle" class="mainTextStyle intro2Text">
+				I’m a <hl>programmer</hl> and <hl>web developer</hl>
 			</div>
 			<div class="mainTextStyle intro3Text">
-				Passion in programming and <br> great in problem-solving, <br> troubleshooting and debugging, <br> dedicated to task completion, <br> and work on team. 
+				Passion in programming and great in problem-solving, troubleshooting and debugging, dedicated to task completion, and work on team. 
 			</div>
+
 		</div>	
+
+		<!-- 
+		=========================
+			About me
+		========================= 
+		-->
+		
+		<style>
+			.about1Text {
+				transform: translate(5vw, 11vw);
+				z-index: 2;
+				font-family: BuiltTilt;
+				font-size: 1.3vw;
+			}
+			.about2Text {
+				width: 44vw;
+				transform: translate(5vw, 14vw);
+				z-index: 2;
+				font-family: DREPHONIC;
+				font-size: 1.9vw;
+				text-align: justify;
+			}
+		</style>
+
+		<div id="aboutPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
+
+			<!-- Introduction text -->
+			<div class="mainTextStyle about1Text">
+				<hl>//</hl> Profile Summary
+			</div>
+
+			<div class="mainTextStyle about2Text">
+				I'm seeking opportunities in the programming field to fully utilize my skills and knowledge. With a passion for programming and a knack for problem-solving, troubleshooting, and debugging, I am dedicated to task completion and thrive in team environments.
+			</div>
+
+		</div>
+
+		<!-- 
+		=========================
+			Project
+		========================= 
+		-->
+		
+		<div id="projectPage" class="baseBox">
+
+		</div>
+
+		<!-- 
+		=========================
+			Contact
+		========================= 
+		-->
+
+		<div id="contactPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
+		</div>
+
 		
 	</body>
 </html>  

@@ -14,6 +14,16 @@
 				background-color:rgb(158, 158, 158);
 			}
 
+			:root {
+				--highlight_color:rgb(255, 55, 81);
+				--base_color1: rgb(21, 21, 23);
+				--base_color2: rgb(29, 29, 34);
+				--base_color3: rgb(41, 41, 46);
+				--text_color1: rgb(227, 227, 255);
+				--text_color2: rgb(153, 153, 181);
+			}
+
+
 			/* Different Font types */
 			@font-face {
 				font-family: Ballega;
@@ -34,14 +44,13 @@
 
 			/* Text style */
 			.mainTextStyle {
-				width: 20vw;
-				color: rgb(227, 227, 255); 
+				color: var(--text_color1); 
 				font-family: Ballega;
 			}
 
 			/* Text highlight */
 			hl {
-				color:rgb(255, 87, 87);
+				color:var(--highlight_color)
 			}
 
 			/* Data table padding */
@@ -58,7 +67,7 @@
 				position: relative;
 				padding: 2vw;
 				height: 44vw;
-				background-color: rgb(39, 39, 48); 
+				background-color: var(--base_color1)
 			}
 
 		</style>	
@@ -66,12 +75,17 @@
 	
 	<body>
 
-		<!-- Debug purpose -->
+		<!-- 
+		=========================
+			Debug purpose
+		========================= 
+		-->
+
 		<style>
 			/* For debug purpose, check width element */
-			/* div {
-				border: .1vw solid greenyellow;
-			} */
+			div {
+				/* border: .1vw solid greenyellow; */
+			}
 
 			/* Display text for debug */
 			#debug {
@@ -82,7 +96,7 @@
 			}
 		</style>
 
-		<!-- <div id="debug" class="mainTextStyle">Press any key</div> -->
+		<div id="debug" class="mainTextStyle">Press any key</div>
 
 		<script>
 			document.addEventListener('wheel', function(event) {
@@ -113,7 +127,7 @@
 				transform: translate(1vw, 1vw);
 				padding: .5vw;
 				z-index: 10;
-				background-color: rgba(75, 75, 92, 0.812);
+				background-color: var(--base_color3);
 				border-radius: 3vw;
 			}
 			.MenuText {
@@ -124,7 +138,7 @@
 				transition: all 0.3s;	
 			}
 			.MenuText:hover {
-				color: rgb(255, 70, 70);
+				color: var(--highlight_color);
 				transition: all 0.3s;	
 			}
 		</style>
@@ -162,7 +176,7 @@
 				position: absolute;
 				width: 10vw; 
 				height: .3vw;
-				background-color: rgb(203, 56, 56);
+				background-color: var(--highlight_color);
 				transform: translate(7vw, 22vw);
 			}
 
@@ -173,7 +187,7 @@
 				transform: translate(7vw, 23vw);
 				z-index: 2;
 				font-size: 6vw;
-				color:rgb(242, 242, 253);
+				color: var(--text_color1);
 			}
 
 			/* Style for Bal Image */
@@ -188,9 +202,8 @@
 				position: absolute;
 				transform: translate(60vw, 9.7vw);
 				z-index: 2;
-				font-family: BuiltTilt;
 				font-size: 1.3vw;
-				color:rgb(227, 227, 255);
+				color: var(--text_color1);
 			}
 			.intro2Text {
 				position: absolute;
@@ -206,7 +219,7 @@
 				z-index: 2;
 				font-family: DREPHONIC;
 				font-size: 1.7vw;
-				color:rgb(153, 153, 181);
+				color: var(--text_color2)
 			}
 
 		</style>
@@ -244,33 +257,76 @@
 		-->
 		
 		<style>
-			.about1Text {
-				transform: translate(5vw, 11vw);
+
+			/* Style for Profile Summary Section */
+			.profSumCont {
+				position: absolute;
+				width: 40vw;
+				transform: translate(5vw, 15vw);
+			}
+			.profSum1Text {
 				z-index: 2;
-				font-family: BuiltTilt;
 				font-size: 1.3vw;
 			}
-			.about2Text {
-				width: 44vw;
-				transform: translate(5vw, 14vw);
+			.profSum2Text {
+				transform: translate(0vw, 1vw);
 				z-index: 2;
 				font-family: DREPHONIC;
 				font-size: 1.9vw;
-				text-align: justify;
+				color: var(--text_color2)
 			}
+			
+			/* Style for Education Section */
+			.eduCont {
+				position: absolute;
+				width: 35vw;
+				transform: translate(55vw, 11vw);
+			}
+			.edu1Text {
+				z-index: 2;
+				font-size: 1.3vw;
+				/* color: var(--text_color2) */
+			}
+			.edu2Text {
+				transform: translate(0vw, 1vw);
+				z-index: 2;
+				font-size: 1.9vw;
+			}
+			.edu3Text {
+				transform: translate(1vw, 5vw);
+				z-index: 2;
+				font-size: 1.4vw;
+				color: var(--text_color2)
+			}
+
 		</style>
 
-		<div id="aboutPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
-
-			<!-- Introduction text -->
-			<div class="mainTextStyle about1Text">
-				<hl>//</hl> Profile Summary
+		<div id="aboutPage" class="baseBox" style="background-color: var(--base_color2);">
+			
+			<!-- Profile Summary -->
+			<div class="profSumCont">
+				<div class="mainTextStyle profSum1Text">
+					<hl>//</hl> Profile Summary
+				</div>
+				<div class="mainTextStyle profSum2Text">
+					I'm seeking opportunities in the programming field to fully utilize my skills and knowledge. With a passion for programming and a knack for problem-solving, troubleshooting, and debugging, I am dedicated to task completion and thrive in team environments.
+				</div>
 			</div>
 
-			<div class="mainTextStyle about2Text">
-				I'm seeking opportunities in the programming field to fully utilize my skills and knowledge. With a passion for programming and a knack for problem-solving, troubleshooting, and debugging, I am dedicated to task completion and thrive in team environments.
+			<!-- Education -->
+			<div class="eduCont">
+				<div class="mainTextStyle edu1Text">
+					<hl>//</hl> Education
+				</div>
+				<div class="mainTextStyle edu2Text">
+					Bachelor Degree in <hl>Electronics Engineering</hl> <br> <div style="font-size: 1.1vw; transform: translate(0vw, .5vw); color: var(--text_color2)">(Major in Computer Engineering)</div>
+				</div>
+				<div class="mainTextStyle edu3Text">
+					<hl>></hl> Universiti Teknologi MARA Shah Alam <br><br>
+					<hl>></hl> April 2021 - March 2024 <br><br>
+					<hl>></hl> CGPA: <hl>3.61</hl>
+				</div>
 			</div>
-
 		</div>
 
 		<!-- 
@@ -288,25 +344,25 @@
 		========================= 
 		-->
 
-		<div id="contactPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
+		<div id="contactPage" class="baseBox" style="background-color: var(--base_color2);">
 		</div>
 
 		<div id="projectPage" class="baseBox">
 		</div>
 
-		<div id="contactPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
+		<div id="contactPage" class="baseBox" style="background-color: var(--base_color2);">
 		</div>
 
 		<div id="projectPage" class="baseBox">
 		</div>
 
-		<div id="contactPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
+		<div id="contactPage" class="baseBox" style="background-color: var(--base_color2);">
 		</div>
 
 		<div id="projectPage" class="baseBox">
 		</div>
 
-		<div id="contactPage" class="baseBox" style="background-color: rgb(49, 49, 63);">
+		<div id="contactPage" class="baseBox" style="background-color: var(--base_color2);">
 		</div>
 
 		

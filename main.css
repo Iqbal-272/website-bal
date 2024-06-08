@@ -1,0 +1,77 @@
+html {
+    /* For smmoth scrolling effect */
+    scroll-behavior: smooth;
+}
+body {
+    background-color:rgb(158, 158, 158);
+}
+
+/* Variables */
+:root {
+    --highlight_color:rgb(255, 55, 81);
+    --base_color1: rgb(21, 21, 23);
+    --base_color2: rgb(29, 29, 34);
+    --base_color3: rgb(41, 41, 46);
+    --text_color1: rgb(227, 227, 255);
+    --text_color2: rgb(153, 153, 181);
+}
+
+
+/* Different Font types */
+@font-face {
+    font-family: Ballega;
+    src: url(Font/Ballega.otf);
+}
+@font-face {
+    font-family: GodshineSans;
+    src: url(Font/GodshineSans.ttf);
+}
+@font-face {
+    font-family: BuiltTilt;
+    src: url(Font/BuiltTilt.otf);
+}
+@font-face {
+    font-family: DREPHONIC;
+    src: url(Font/DREPHONIC.ttf);
+}
+
+/* Text style */
+.mainTextStyle {
+    color: var(--text_color1); 
+    font-family: Ballega;
+}
+
+/* Text highlight */
+hl {
+    color:var(--highlight_color)
+}
+
+/* Data table padding */
+td {
+    padding: 2px 30px;
+}
+
+/* Properties for each container box */
+* {
+    margin: 0;
+    padding: 0;
+}
+.baseBox {
+    position: relative;
+    padding: 2vw;
+    height: 44vw;
+    background-color: var(--base_color1)
+}
+
+/* For debug purpose, check width element */
+div {
+    /* border: .1vw solid greenyellow; */
+}
+
+/* Display text for debug */
+#debug {
+    position: fixed; 
+    right: 0vw; 
+    text-align: right; 
+    z-index: 90;
+}

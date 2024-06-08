@@ -1,0 +1,111 @@
+/* Style for Menu  */
+.MenuBase {
+    position: fixed; 
+    left: 10px;
+    top: 10px;
+    padding: 10px;
+    z-index: 10;
+    background-color: var(--base_color3);
+    border-radius: 30px;
+}
+.MenuText {
+    z-index: 2;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.3s;	
+}
+.MenuText:hover {
+    color: var(--highlight_color);
+    transition: all 0.3s;	
+}
+
+
+
+/* Style for line decoration */
+.lineDeco {
+    position: absolute;
+    width: 10vw; 
+    height: .3vw;
+    background-color: var(--highlight_color);
+    transform: translate(7vw, 22vw);
+}
+
+
+
+/* Style for name  */
+.nameText {
+    position: absolute;
+    width: 28vw;
+    transform: translate(7vw, 23vw);
+    z-index: 2;
+    font-size: 6vw;
+    color: var(--text_color1);
+}
+
+
+
+/* Style for Bal Image */
+.balImage {
+    position: absolute;
+    width: 42vw;
+    left: 26vw;
+    bottom: 0;
+}
+
+
+
+/* Style for introduction  */
+.intro1Text {
+    position: absolute;
+    transform: translate(60vw, 9.7vw);
+    z-index: 2;
+    font-size: 1.3vw;
+    color: var(--text_color1);
+}
+.intro2Text {
+    position: absolute;
+    width: 28vw;
+    transform: translate(60vw, 12vw);
+    z-index: 2;
+    font-size: 2.2vw;
+}
+.intro3Text {
+    position: absolute;
+    width: 28vw;
+    transform: translate(60vw, 20vw);
+    z-index: 2;
+    font-family: DREPHONIC;
+    font-size: 1.7vw;
+    color: var(--text_color2)
+}
+
+
+/* When screen width 60px and less */
+@media screen and (max-width: 1200px) {
+
+    /* Style for Bal Image */
+    .MenuBase {
+        visibility: collapse;
+    }
+}
+
+/* When screen width 60px and less */
+@media screen and (max-width: 600px) {
+
+    /* Style for Bal Image */
+    .baseBox {
+        height: 190vw;
+    }
+
+    /* Style for Bal Image */
+    .balImage {
+        width: 100vw;
+        bottom: 0;
+        left: 0vw;
+        overflow-x: clip;
+    }
+
+    .intro1Text {
+        color: var(--highlight_color);
+    }
+}

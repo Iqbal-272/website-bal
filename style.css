@@ -127,7 +127,7 @@ div {
 /* Style for Bal Image */
 .balImage {
     position: absolute;
-    width: 45vw;
+    width: 600px;
     transform: translate(25vw, 0vw);
 }
 

@@ -20,24 +20,21 @@
 }
 
 
-
+.nameContainer {
+    position: absolute;
+    left: 7vw;
+    top: 25vw;
+    z-index: 2;
+}
 /* Style for line decoration */
 .lineDeco {
-    position: absolute;
     width: 10vw; 
     height: .3vw;
     background-color: var(--highlight_color);
-    transform: translate(7vw, 22vw);
 }
-
-
-
 /* Style for name  */
 .nameText {
-    position: absolute;
     width: 28vw;
-    transform: translate(7vw, 23vw);
-    z-index: 2;
     font-size: 6vw;
     color: var(--text_color1);
 }
@@ -48,31 +45,31 @@
 .balImage {
     position: absolute;
     width: 42vw;
-    left: 26vw;
+    left: 27vw;
     bottom: 0;
 }
 
 
 
 /* Style for introduction  */
-.intro1Text {
+.introContainer {
     position: absolute;
-    transform: translate(60vw, 9.7vw);
+    right: 7vw;
+    top: 8vw;
+    width: 31vw;
+}
+.intro1Text {
     z-index: 2;
-    font-size: 1.3vw;
+    font-size: 1.7vw;
     color: var(--text_color1);
+    margin-bottom: .7vw;
 }
 .intro2Text {
-    position: absolute;
-    width: 28vw;
-    transform: translate(60vw, 12vw);
     z-index: 2;
-    font-size: 2.2vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
 }
 .intro3Text {
-    position: absolute;
-    width: 28vw;
-    transform: translate(60vw, 20vw);
     z-index: 2;
     font-family: DREPHONIC;
     font-size: 1.7vw;
@@ -94,18 +91,55 @@
 
     /* Style for Bal Image */
     .baseBox {
-        height: 190vw;
+        height: 610px;
     }
 
     /* Style for Bal Image */
     .balImage {
-        width: 100vw;
+        width: 320px;
         bottom: 0;
-        left: 0vw;
+        left: 0;
+        right: 0;
+        text-align: center;
         overflow-x: clip;
+        margin: auto;
     }
 
+
+    .nameContainer {
+        top: 50px;
+    }
+    .nameText {
+        width: auto;
+        font-size: 30px;
+    }
+    .lineDeco {
+        width: 50px; 
+        height: 2px;
+    }
+
+
+    .introContainer {
+        width: 70vw;
+        left: 7vw;
+        top: 150px;
+    }
     .intro1Text {
-        color: var(--highlight_color);
+        font-size: 12px;
+        margin-bottom: 1vw;
+    }
+    .intro2Text {
+        font-size: 15px;
+        margin-bottom: 2vw;
+    }
+    .intro3Text {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .balImage {
+        width: 100vw;
     }
 }

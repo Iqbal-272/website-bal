@@ -23,7 +23,7 @@
 .nameContainer {
     position: absolute;
     left: 7vw;
-    top: 25vw;
+    top: 10vw;
     z-index: 2;
 }
 /* Style for line decoration */
@@ -34,8 +34,8 @@
 }
 /* Style for name  */
 .nameText {
-    width: 28vw;
-    font-size: 6vw;
+    font-size: 7vw;
+    font-family: Poppins;
     color: var(--text_color1);
 }
 
@@ -45,7 +45,7 @@
 .balImage {
     position: absolute;
     width: 42vw;
-    left: 27vw;
+    right: 5vw;
     bottom: 0;
 }
 
@@ -54,27 +54,11 @@
 /* Style for introduction  */
 .introContainer {
     position: absolute;
-    right: 7vw;
-    top: 8vw;
-    width: 31vw;
+    left: 7vw;
+    top: 25vw;
+    width: 45vw;
 }
-.intro1Text {
-    z-index: 2;
-    font-size: 1.7vw;
-    color: var(--text_color1);
-    margin-bottom: .7vw;
-}
-.intro2Text {
-    z-index: 2;
-    font-size: 2vw;
-    margin-bottom: 1.5vw;
-}
-.intro3Text {
-    z-index: 2;
-    font-family: DREPHONIC;
-    font-size: 1.7vw;
-    color: var(--text_color2)
-}
+
 
 
 /* When screen width 60px and less */
@@ -91,27 +75,27 @@
 
     /* Style for Bal Image */
     .baseBox {
-        height: 610px;
+        height: 860px;
     }
 
     /* Style for Bal Image */
     .balImage {
-        width: 320px;
+        width: 450px;
         bottom: 0;
         left: 0;
         right: 0;
         text-align: center;
-        overflow-x: clip;
+        overflow-x: hidden;
         margin: auto;
     }
 
 
     .nameContainer {
-        top: 50px;
+        top: 90px;
     }
     .nameText {
-        width: auto;
-        font-size: 30px;
+        width: 100%;
+        font-size: 45px;
     }
     .lineDeco {
         width: 50px; 
@@ -122,18 +106,7 @@
     .introContainer {
         width: 70vw;
         left: 7vw;
-        top: 150px;
-    }
-    .intro1Text {
-        font-size: 12px;
-        margin-bottom: 1vw;
-    }
-    .intro2Text {
-        font-size: 15px;
-        margin-bottom: 2vw;
-    }
-    .intro3Text {
-        font-size: 12px;
+        top: 200px;
     }
 }
 

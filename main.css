@@ -5,6 +5,10 @@ html {
 body {
     background-color:rgb(158, 158, 158);
 }
+body * {
+    /* Visualize element border for debugging */
+    /* border: .1vw solid greenyellow; */
+}
 
 /* Variables */
 :root {
@@ -17,30 +21,46 @@ body {
 }
 
 
+
+
+
 /* Different Font types */
 @font-face {
-    font-family: Ballega;
-    src: url(Font/Ballega.otf);
+    font-family: Poppins;
+    src: url(Font/Poppins-SemiBold.ttf);
 }
 @font-face {
-    font-family: GodshineSans;
-    src: url(Font/GodshineSans.ttf);
-}
-@font-face {
-    font-family: BuiltTilt;
-    src: url(Font/BuiltTilt.otf);
-}
-@font-face {
-    font-family: DREPHONIC;
-    src: url(Font/DREPHONIC.ttf);
+    font-family: Rajdhani;
+    src: url(Font/Rajdhani-Regular.ttf);
 }
 
-/* Text style */
-.mainTextStyle {
-    color: var(--text_color1); 
-    font-family: Ballega;
-}
 
+
+
+
+/* Text Style */
+t1 {
+    display: inline-block;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: Poppins;
+    color: var(--text_color1);
+    margin-bottom: .5vw;
+}
+t2 {
+    display: inline-block;
+    font-size: 2vw;
+    font-family: Poppins;
+    color: var(--text_color1);
+    margin-bottom: 1vw;
+}
+t3 {
+    display: inline-block;
+    font-size: 1.5vw;
+    font-family: Rajdhani;
+    color: var(--text_color2);
+    margin-bottom: .5vw;
+}
 /* Text highlight */
 hl {
     color:var(--highlight_color)
@@ -50,6 +70,10 @@ hl {
 td {
     padding: 2px 30px;
 }
+
+
+
+
 
 /* Properties for each container box */
 * {
@@ -63,10 +87,9 @@ td {
     background-color: var(--base_color1)
 }
 
-/* For debug purpose, check width element */
-div {
-    border: .1vw solid greenyellow;
-}
+
+
+
 
 /* Display text for debug */
 #debug {
@@ -74,4 +97,22 @@ div {
     right: 0vw; 
     text-align: right; 
     z-index: 90;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    t1 {
+        font-size: 25px;
+        margin-bottom: 3px;
+    }
+    t2 {
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+    t3 {
+        font-size: 10px;
+    }
 }

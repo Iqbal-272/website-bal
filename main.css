@@ -12,9 +12,9 @@ body * {
 
 /* Variables */
 :root {
-    --highlight_color:rgb(255, 55, 81);
-    --base_color1: rgb(21, 21, 23);
-    --base_color2: rgb(29, 29, 34);
+    --highlight_color:rgb(255, 14, 46);
+    --base_color1: rgb(34, 34, 36);
+    --base_color2: rgb(21, 21, 23);
     --base_color3: rgb(41, 41, 46);
     --text_color1: rgb(227, 227, 255);
     --text_color2: rgb(153, 153, 181);
@@ -109,10 +109,10 @@ td {
         margin-bottom: 3px;
     }
     t2 {
-        font-size: 15px;
+        font-size: 20px;
         margin-bottom: 7px;
     }
     t3 {
-        font-size: 10px;
+        font-size: 15px;
     }
 }

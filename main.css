@@ -38,7 +38,7 @@ body {
 /* Text style */
 .mainTextStyle {
     color: var(--text_color1); 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Ballega;
 }
 
 /* Text highlight */

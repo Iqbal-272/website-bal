@@ -38,7 +38,7 @@ body {
 /* Text style */
 .mainTextStyle {
     color: var(--text_color1); 
-    font-family: Ballega;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Text highlight */
@@ -65,7 +65,7 @@ td {
 
 /* For debug purpose, check width element */
 div {
-    /* border: .1vw solid greenyellow; */
+    border: .1vw solid greenyellow;
 }
 
 /* Display text for debug */
